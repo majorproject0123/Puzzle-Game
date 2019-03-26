@@ -1,0 +1,141 @@
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<div [style.text-align]="'center'" style="font-style:italic !important;">
+  <div class="w3-container w3-blue">
+    <h1>PUZZLE MASTER</h1>
+    <div [style.text-align]="'right'" style="font-style:italic">
+    <h6></h6>
+    <a class="navbar-brand col-sm-1 col-md-1 mr-0" routerLink="/dashboard">
+      <span class="dashboard">Dashboard</span>
+    </a>
+  </div>
+    
+    </div>
+      </div>
+      
+      
+
+ <br>
+<!-- <pre>
+  <code>
+  {{"import { AppModule } from 'app.module';"}}
+
+    imports: [
+      ...
+      AppModule
+    ]
+  </code>
+</pre> -->
+<br>
+<div [style.text-align]="'center'" >
+    
+  <iceey-puzzle
+    #puzzle
+      [imgUrl]="settings.imgUrl"
+      [basicDimension]="settings.dimension"
+      [puzzleLevel]="settings.level"
+      [delay]="settings.delay"
+      (puzzleClick)="console.log($event)" >
+  </iceey-puzzle>
+</div>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div [style.text-align]="'center'" style="font-style:italic !important;">
+  <div class="w3-container w3-blue">
+    <h1></h1>
+  </div>
+      </div>
+     
+
+<br>
+      <br>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+      <div [style.text-align]="'center'" style="font-style:italic !important;">
+        <div class="w3-container w3-blue">
+          <h1></h1>
+        </div>
+            </div>
+            <style>
+                table {
+                  border-collapse: separate;
+                  width: 100%;
+                  text-align: center;
+                }
+                
+                th, td {
+                  padding: 8px;
+                  text-align: center;
+                  border-bottom: 5px solid #808080;
+                }
+                
+                tr:hover {background-color:	#4785d6;
+                }
+                </style>
+                
+                
+<table class="description">
+  <tr>
+    
+    <td>
+      <pre><code>{{imgUrlUsage}}</code></pre>
+    </td>
+    <td>
+      
+      <select [(ngModel)]="settings.imgUrl" >
+        <option *ngFor="let i of imageSources" [value]="i" >{{ i.replace('/iceey-puzzle','').replace('/assets/','') }}</option>
+      </select>
+    </td>
+  </tr>
+  
+  <tr>
+    <td>
+      <pre><code>{{basicDimensionUsage}}</code></pre>
+    </td>
+    <td>
+      <input type="number" [(ngModel)]="settings.dimension" min="200" >      
+    </td>
+    
+  </tr>
+  <tr>
+    <td>
+      <pre><code>{{puzzleLevelUsage}}</code></pre>
+    </td>
+    <td>
+      <input type="number" [(ngModel)]="settings.level" min="3" >
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <pre><code>{{delayUsage}}</code></pre>
+    </td>
+    <td>
+      <input type="number" [(ngModel)]="settings.delay" step="0.1" >
+    </td>    
+  </tr>
+  <tr>
+    <td>
+      <pre><code>{{shuffleUsage}}</code></pre>
+    </td>
+    <td><button (click)="puzzle.shuffle()" >Shuffle</button></td>
+  </tr>
+  <tr>
+    <td>
+      <pre><code>{{arrangeUsage}}</code></pre>
+    </td>
+    <td>
+    <div [style.font-style]="'italics'">
+     <button (click)="puzzle.arrange()">Solve</button>
+    </div>
+    </td>
+  </tr>
+  </table>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<div [style.text-align]="'center'" style="font-style:italic !important;">
+  <div class="w3-container w3-blue">
+    <h1></h1>
+  </div>
+      </div>
